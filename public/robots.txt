@@ -1,0 +1,14 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow private/sensitive routes
+Disallow: /session/
+Disallow: /oauth/
+Disallow: /dev/
+
+# Sitemap location
+Sitemap: https://somasync.app/sitemap.xml
+
+# Crawl-delay for polite crawling (optional)
+Crawl-delay: 1

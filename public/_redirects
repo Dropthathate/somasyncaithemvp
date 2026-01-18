@@ -1,0 +1,16 @@
+# API proxy to backend (if using separate backend)
+/api/*  https://themvp.netlify.app/.netlify/functions/api/:splat  200
+
+# SPA fallback - serve index.html for all routes
+/*  /index.html  200
+
+# Geo-based redirects (example - customize based on your needs)
+# /  /en-us  302  Country=us
+# /  /en-ca  302  Country=ca
+# /  /en-gb  302  Country=gb
+
+# Force HTTPS
+http://:domain/*  https://:domain/:splat  301!
+
+# Redirect old URLs (if any)
+# /old-path  /new-path  301
